@@ -1,2 +1,1 @@
-# Responsive.io
-Responsive Prototype
+This is A Responsive prototype for a course i made :)
