@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main img{
+    max-width:100%;
+    margin:auto;
+    padding:5px;
+    background-color: white;
+    text-align: center;
+    display: block;
+}
+.main > .container{
+
+    order:1;
+}
+
+.main > aside{
+    background-color: lightgray;
+    order:3;
+}
+.main > article{
+    background-color: #F8FFF4;
+    order:2;
+}
+header, footer {
+    background-color: #474350;
+    color: #F8FFF4;
+}
+footer{
+    min-height: 60px;
+    text-align: center;
+    padding: 20px;
+    border-bottom:10px solid black;
+}
+.logo{
+    font-size:1.3em;
+    padding: 8px;
+}
+.navbar{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+}
+
+
+.navbar{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navboton{
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    width: 90%;
+    display:none;
+}
+.toggle{
+    font-size: 1.6em;
+    order:1;
+}
+.active .navboton{
+    display:block;
+}
+a{
+    color:white;
+
+}
+.logo{
+ margin: 10px 10px;
+text-align: center;
+ border:1px solid white;
+}
+.logo:hover{
+  background-color: black;
+   }
+
+.navboton a{
+    display:block;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+.navboton a:hover{
+    background-color: #36333d;
+    color:white;
+}
+
+@media all and (min-width:960px){
+   .main{
+    flex:1;
+    flex-direction: row;
+   }
+    .main > .container{
+        flex:1;
+        order:1;
+    }
+    .main > article,
+    .main > aside{
+        flex: 0 0 20vw;
+    }
+    .navboton{
+        position:relative;
+        display:block;
+        width:auto;
+        order:1;
+    }
+    .navbar{
+        align-items: flex-start;
+        flex-wrap:nowrap;
+    }
+    .toggle{
+        display:none;
+        flex: 1;
+        text-align: right;
+    }
+    .logo{
+        flex:0;
+    }
+}
